@@ -1,18 +1,18 @@
 {
     "homepage": "https://windows.php.net/downloads/releases/",
-    "version": "8.2.13",
+    "version": "8.3.0",
     "license": {
         "identifier": "PHP-3.01",
         "url": "https://secure.php.net/license/"
     },
     "architecture": {
         "64bit": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.13-Win32-vs16-x64.zip",
-            "hash": "f96a1010ca98203384d964ebff56410b62301c7cb333e060a3364536458b5ff6"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.0-nts-Win32-vs16-x64.zip",
+            "hash": "A051BB3332E7516769E62DD00ED5C2C53C89BCEAF1CAC15FFBA0115D26B1952B"
         },
         "32bit": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.13-Win32-vs16-x86.zip",
-            "hash": "7e619530cc0ea911d6cc9323716bd0f35f285f9de7074b2e311509ff3d12a37b"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.0-nts-Win32-vs16-x86.zip",
+            "hash": "6455669786A4ADADCE228BC3EBCD7104150879CD1B703FA053045BCF0258D9C4"
         }
     },
     "bin": [
@@ -26,15 +26,15 @@
     "post_install": "if($bucket) { . \"$(Find-BucketDirectory $bucket\\bin\\postinstall.ps1)\" -dir \"$dir\" }",
     "checkver": {
         "url": "https://windows.php.net/download/",
-        "re": "<h3 id=\"php-8.2\".*?>.*?\\(([\\d.-]+)\\)</h3>"
+        "re": "<h3 id=\"php-8.3\".*?>.*?\\(([\\d.-]+)\\)</h3>"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://windows.php.net/downloads/releases/php-$version-Win32-vs16-x64.zip"
+                "url": "https://windows.php.net/downloads/releases/php-$version-nts-Win32-vs16-x64.zip"
             },
             "32bit": {
-                "url": "https://windows.php.net/downloads/releases/php-$version-Win32-vs16-x86.zip"
+                "url": "https://windows.php.net/downloads/releases/php-$version-nts-Win32-vs16-x86.zip"
             }
         },
         "hash": {
